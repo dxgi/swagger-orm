@@ -1,5 +1,7 @@
 # swagger-orm
 Swagger-ORM is a runtime-driven, object-oriented mapping tool for describing routes and routers without the need for a separate JSON configuration, streamlining the process during startup.
+
+The available functionalities are limited, and if you wish to incorporate additional features, you have the option to implement them yourself or submit an issue for consideration.
 <br>
 <br>
 # definitions
