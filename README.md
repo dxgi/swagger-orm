@@ -1,9 +1,8 @@
 # swagger-orm
 Swagger-ORM is a runtime-driven, object-oriented mapping tool for describing routes and routers without the need for a separate JSON configuration, streamlining the process during startup.
-
+<br>
+<br>
 # definitions
-
-
 - describing a server
 ```ts
 import { Router } from 'express'
@@ -24,7 +23,7 @@ router.use('/', serve, setup(
 
 export default router;
 ```
-
+<br>
 
 - describing a router
 ```ts
@@ -44,7 +43,7 @@ export const path = Swagger.ToPath('auth', {
   */
 });
 ```
-
+<br>
 
 - describing a route
 ```ts
