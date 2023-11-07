@@ -31,8 +31,7 @@ export default router;
 ```ts
 import { Swagger } from 'swagger-orm';
 
-// auth.domain.tdl, leave as undefined if no subdomain, would be transpiled as domain.tdl
-export const path = Swagger.ToPath('auth', {
+export const path = Swagger.ToPath('auth', 'domain.tdl', {
   '/sign-in': signIn.define
     
   /*
