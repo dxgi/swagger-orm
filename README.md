@@ -9,15 +9,43 @@ The available functionalities are limited, and if you wish to incorporate additi
 ```ts
 import { Router } from 'express'
 import { serve, setup } from 'swagger-ui-express';
-import swagger from 'swagger-orm';
+import { Documentation } from 'swagger-orm';
 
 import { path as auth } from 'routes/auth.js';
 import { path as users } from 'routes/users/index.js';
 
 const router = Router();
 
+const documentation = new Documentation({
+    openapi: '3.0.3',
+    info: {
+        title: '...',
+        description: '...',
+        version: '1.0.11'
+    },
+    servers: [
+        {
+            url: 'https://auth.domain.tdl'
+        }
+    ],
+    tags: [
+        {
+            name: 'Authentication'
+        }
+    ],
+    components: {
+        securitySchemes: {
+            Authorization: {
+                type: 'http',
+                scheme: 'bearer',
+                bearerFormat: 'JWT'
+            }
+        }
+    }
+});
+
 router.use('/', serve, setup(
-    swagger.compile({
+    documentation.compile({
         ...auth,
         ...users
     })
