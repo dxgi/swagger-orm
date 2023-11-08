@@ -1,0 +1,40 @@
+{
+    "name": "swagger-orm",
+    "version": "1.0.0",
+    "description": "Swagger-ORM is a runtime-driven, object-oriented mapping tool for describing routes and routers without the need for a separate JSON configuration, streamlining the process during startup.",
+    "keywords": [
+        "swagger",
+        "orm",
+        "express",
+        "documentation",
+        "swagger-ui"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dxgi/swagger-orm.git"
+    },
+    "bugs": {
+        "url": "https://github.com/dxgi/swagger-orm/issues"
+    },
+    "author": {
+        "name": "iMaximus Developer",
+        "email": "imaximushelp@gmail.com",
+        "url": "https://github.com/dxgi"
+    },
+    "license": "MIT",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "build": "tsc && tsc-alias",
+        "build:watch": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
+        "prepare": "yarn run build"
+    },
+    "dependencies": {
+        "dts-gen": "^0.7.2",
+        "typescript": "^5.2.2"
+    },
+    "devDependencies": {}
+}
